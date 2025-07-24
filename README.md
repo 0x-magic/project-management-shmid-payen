@@ -145,6 +145,11 @@ create table public.users (
   constraint username_length check ((char_length(username) >= 3))
 ) TABLESPACE pg_default;
 
+create trigger on_auth_user_created
+after insert on auth.users
+for each row
+execute function handle_new_user();
+
 # Policy configuration
 
 Public users are viewable by everyone.
