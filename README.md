@@ -150,6 +150,33 @@ after insert on auth.users
 for each row
 execute function handle_new_user();
 
+create or replace function handle_new_user()
+returns trigger
+language plpgsql
+security definer
+as $$
+begin
+  insert into public.users (
+    id,
+    username,
+    email,
+    country,
+    status,
+    role
+  )
+  values (
+    new.id,
+    new.raw_user_meta_data->>'username',
+    new.email,
+    new.raw_user_meta_data->>'country',
+    COALESCE((new.raw_user_meta_data->>'status')::smallint, 1),
+    COALESCE((new.raw_user_meta_data->>'role')::smallint, 1)
+  );
+  return new;
+end;
+$$;
+
+
 # Policy configuration
 
 Public users are viewable by everyone.
