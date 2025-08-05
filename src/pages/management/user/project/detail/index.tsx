@@ -35,6 +35,12 @@ const defaultInterviewValue: InterviewInfo = {
 	user: "",
 	profile: "",
 	website: "",
+	term: "",
+	status: "",
+	comment: "",
+	source: "",
+	position: "",
+	mark: "",
 	meeting_date: "",
 	meeting_link: "",
 	proposal: {
