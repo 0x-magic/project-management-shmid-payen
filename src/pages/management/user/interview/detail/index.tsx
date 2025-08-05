@@ -208,6 +208,7 @@ export default function InterviewPage() {
 			key: "operation",
 			align: "center",
 			width: 100,
+			fixed: "right",
 			render: (_, record) => (
 				<div className="flex w-full justify-end text-gray">
 					<Button variant="ghost" size="icon" onClick={() => onEdit(record)}>

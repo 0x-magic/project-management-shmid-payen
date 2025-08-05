@@ -79,9 +79,9 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 							name="website"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Meeting Title</FormLabel>
+									<FormLabel>Website</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -95,7 +95,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Person/Executive</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -109,7 +109,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Term</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -123,7 +123,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Status</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -137,7 +137,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Comment</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -151,7 +151,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Source</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -165,7 +165,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>Position</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
@@ -179,7 +179,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 								<FormItem>
 									<FormLabel>1 Through 5 System</FormLabel>
 									<FormControl>
-										<Input {...field} />
+										<Textarea className="max-h-32" {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>
