@@ -30,11 +30,11 @@ export default function InterviewOverviewPage() {
 
   const columns: ColumnsType<InterviewInfo> = [
     {
-      title: "Meeting Title",
-      dataIndex: "meeting_title",
+      title: "Website",
+      dataIndex: "website",
       width: 150,
       sorter: (a, b) => a.id.localeCompare(b.id),
-      render: (_, record) => <div>{(record.meeting_title)}</div>,
+      render: (_, record) => <div>{(record.website)}</div>,
     },
     {
       title: "Meeting Link",

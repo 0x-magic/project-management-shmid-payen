@@ -128,7 +128,13 @@ export interface ProposalInfo {
 export interface InterviewInfo {
 	id: string;
 	proposal?: string | Partial<ProposalInfo>;
-	meeting_title?: string;
+	website?: string;
+	term: string;
+	status: string;
+	comment: string;
+	source: string;
+	position: string;
+	mark: string;
 	meeting_link: string;
 	meeting_date: string;
 	progress: InterviewProgress;

@@ -68,7 +68,7 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 
 	return (
 		<Dialog open={show} onOpenChange={(open) => !open && onCancel()}>
-			<DialogContent>
+			<DialogContent className="max-h-[80vh] overflow-y-auto">
 				<DialogHeader>
 					<DialogTitle>{title}</DialogTitle>
 				</DialogHeader>
@@ -76,10 +76,108 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 					<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 						<FormField
 							control={form.control}
-							name="meeting_title"
+							name="website"
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Meeting Title</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="interviewer"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Person/Executive</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="term"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Term</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="status"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Status</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="comment"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Comment</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="source"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Source</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="position"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Position</FormLabel>
+									<FormControl>
+										<Input {...field} />
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+
+						<FormField
+							control={form.control}
+							name="mark"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>1 Through 5 System</FormLabel>
 									<FormControl>
 										<Input {...field} />
 									</FormControl>
@@ -131,20 +229,6 @@ export default function InterviewModal({ title, show, formValue, onOk, onCancel 
 									<FormLabel>Job Description</FormLabel>
 									<FormControl>
 										<Textarea className="max-h-64" {...field} />
-									</FormControl>
-									<FormMessage />
-								</FormItem>
-							)}
-						/>
-
-						<FormField
-							control={form.control}
-							name="interviewer"
-							render={({ field }) => (
-								<FormItem>
-									<FormLabel>Interviewer</FormLabel>
-									<FormControl>
-										<Input {...field} />
 									</FormControl>
 									<FormMessage />
 								</FormItem>

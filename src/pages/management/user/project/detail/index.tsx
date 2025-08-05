@@ -34,7 +34,7 @@ const defaultInterviewValue: InterviewInfo = {
 	id: "",
 	user: "",
 	profile: "",
-	meeting_title: "",
+	website: "",
 	meeting_date: "",
 	meeting_link: "",
 	proposal: {
